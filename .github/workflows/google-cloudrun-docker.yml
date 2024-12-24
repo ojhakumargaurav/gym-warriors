@@ -32,8 +32,8 @@ name: 'Build and Deploy to Cloud Run'
 on:
   push:
     branches:
-      - '"master"'
-      - '"feature/*"'
+      - 'master'
+      - 'feature/*'
 
 env:
   PROJECT_ID: 'gym-warriors' # TODO: update to your Google Cloud project ID
