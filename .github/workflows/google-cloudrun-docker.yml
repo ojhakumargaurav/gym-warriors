@@ -37,7 +37,7 @@ on:
 
 env:
   PROJECT_ID: 'gym-warriors' # TODO: update to your Google Cloud project ID
-  REGION: 'asia-south2' # TODO: update to your region
+  REGION: 'global' # TODO: update to your region
   SERVICE: 'gym-warriors-app' # TODO: update to your service name
   WORKLOAD_IDENTITY_PROVIDER: 'projects/57726195832/locations/global/workloadIdentityPools/github/providers/gym-warriors' # TODO: update to your workload identity provider
 
