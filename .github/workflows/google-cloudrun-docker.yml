@@ -63,21 +63,6 @@ jobs:
         with:
           workload_identity_provider: '${{ env.WORKLOAD_IDENTITY_PROVIDER }}'
   
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20.15.0 # Or your preferred Node.js version
-  
-      - name: Install dependencies
-        working-directory: ./ # Or the path to your Angular project
-        run: npm install
-  
-      - name: Build Angular Project
-        working-directory: ./ # Or the path to your Angular project
-        run: |-
-          npm run build --prod # or ng build --prod
-          ls -ltr
-  
 
       # BEGIN - Docker auth and build
       #
