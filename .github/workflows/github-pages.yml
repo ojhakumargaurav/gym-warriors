@@ -19,9 +19,9 @@ jobs:
         node-version: '16'
 
     - name: Install dependencies
-      run: npm install
+      run: npm ci
     - name: Build
-      run: npm run build:prod
+      run: npm run build --prod
 
     - name: Deploy
       if: success()
