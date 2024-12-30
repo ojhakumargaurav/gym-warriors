@@ -8,10 +8,11 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm ci --omit=dev
+RUN npm ci
 
-# Copy the production build output (from 'dist/gym-warriors' based on your angular.json)
-COPY ./..dist/gym-warriors ./
+COPY . .
+
+RUN npm run build --prod
 
 # Expose port 4000 (or the port your Angular app uses with SSR)
 # Make sure your server.ts file listens to the PORT environment variable provided by Cloud Run
@@ -20,5 +21,4 @@ EXPOSE 4000
 
 
 # Start the server
-CMD ["node", "server/server.mjs"]
-
+CMD ["node", "..dist/gym-warriors/server/server.mjs"]
