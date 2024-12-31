@@ -1,0 +1,14 @@
+<div class="trainers-page">
+  <h1>Our Trainers</h1>
+  <div class="trainers-list">
+    <div class="trainer" *ngFor="let trainer of trainers">
+      <img [src]="trainer.imageUrl" alt="Trainer Image">
+      <h2>{{ trainer.name }}</h2>
+      <p>Skills: {{ trainer.skills.join(', ') }}</p>
+      <p>Training Type: {{ trainer.trainingType }}</p>
+      <p>Certifications:</p>
+      <ul>
+        <li *ngFor="let certification of trainer.certification">{{ certification.name }} ({{ certification.issuingOrganization }}, {{ certification.dateIssued | date }})</li>
+      </ul>
+    </div>
+  </div>

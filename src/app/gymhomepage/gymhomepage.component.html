@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h1 class="title">Welcome to Gym Warriors</h1>
+      <p class="description">Get fit, feel great, and achieve your goals with our expert trainers and state-of-the-art equipment.</p>
+    </div>
+    <div class="col-md-6">
+      <img src="assets/images/gym-image.jpg" alt="Gym Image" class="img-fluid">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <mat-card class="service-card" (click)="openTrainers()">
+        <mat-card-title>Personal Training</mat-card-title>
+        <mat-card-content>Get personalized attention from our expert trainers to help you achieve your fitness goals.</mat-card-content>
+        <mat-card-actions>
+          <div class="collapse" id="personal-training-collapse">
+            <app-trainers></app-trainers>
+          </div>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col-md-4">
+      <mat-card class="service-card">
+        <mat-card-title>Group Fitness</mat-card-title>
+        <mat-card-content>Join our high-energy group fitness classes to get fit and have fun with like-minded people.</mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary">Learn More</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col-md-4">
+      <mat-card class="service-card">
+        <mat-card-title>Membership Plans</mat-card-title>
+        <mat-card-content>Choose from our flexible membership plans to suit your fitness needs and budget.</mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary">Learn More</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+
