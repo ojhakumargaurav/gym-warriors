@@ -7,3 +7,75 @@
     position: relative;
     overflow: hidden;
 }
+
+.sidenav-container {
+  height: 100vh;
+}
+
+.sidenav {
+  width: 250px;
+  
+  .mat-toolbar {
+    background: inherit;
+  }
+
+  mat-nav-list {
+    padding-top: 1rem;
+    
+    a {
+      mat-icon {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  .app-title {
+    margin-left: 8px;
+  }
+
+  button {
+    margin-left: 8px;
+    
+    mat-icon {
+      margin-right: 4px;
+    }
+  }
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+// Mobile optimizations
+@media (max-width: 599px) {
+  .content {
+    padding: 16px;
+  }
+  
+  mat-toolbar {
+    padding: 0 8px;
+  }
+
+  .sidenav {
+    width: 80%;
+    max-width: 300px;
+  }
+}
